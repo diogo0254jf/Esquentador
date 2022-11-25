@@ -8,7 +8,7 @@ const http = require('http');
 const fileUpload = require('express-fileupload');
 const axios = require('axios');
 const mime = require('mime-types');
-const port = process.env.PORT || 8005;
+const port = process.env.PORT || 8006;
 const app = express();
 const server = http.createServer(app);
 const io = socketIO(server);
@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
 });
 
 const client = new Client({
-  authStrategy: new LocalAuth({ clientId: 'bot-zdg5' }),
+  authStrategy: new LocalAuth({ clientId: 'bot-zdg6' }),
   puppeteer: { headless: true,
     args: [
       '--no-sandbox',
@@ -47,7 +47,6 @@ client.initialize();
 
 io.on('connection', function(socket) {
   socket.emit('message', 'Iniciado');
-  
 
 client.on('qr', (qr) => {
     console.log('QR RECEIVED', qr);
