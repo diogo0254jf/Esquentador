@@ -240,7 +240,6 @@ function generateRandomInteger(min, max) {
 client.on('message', async msg => {
   let chat = await msg.getChat();
   if (chat.isGroup) { return }
-  let random = generateRandomInteger(10000, 20000);
   setTimeout(async () => {
     const saudacaoes = ['oi', "tudo bem?", "Tudo bem!", "Tudo sim! oque manda?",  'Vou no mercado hoje!!',  "Perfeito! vamos montar a lista",  'Perfeito! vamos montar a lista',  "Arroz",  'Arroz',  "Feijão",  'Feijão',  "Macarrao",  'Macarrao',  "Oleo",  'Oleo',  "Suco",  'Suco',  "Coca cola",  'Coca cola',  "acho que é só isso!",  'acho que é só isso!',  "Tudo bem então! quando tiver no mercado me avisa!",  'Tudo bem então! quando tiver no mercado me avisa!',  "Tá bem! tchal!",  'Tá bem! tchal!',  "Bjos","tem o nome?","ou print da pergunta da pessoa?","ai vc fala melhor","ao todo sao 5","tudo mes de setembro","desde quando começamos o disparo?","nenhum","😚","❤️","💲","😂","👍","🤦‍♂️","melhor","grande","rico","primeiro","alto","nobre","superior","belo","perfeito","fino","generoso","divino","especial","brilhante","sublime","ótimo","eminente","precioso","interessante","Do mesmo modo, a valorização de fatores subjetivos promove a alavancagem do fluxo de informações.","O que temos que ter sempre em mente é que a revolução dos costumes oferece uma interessante oportunidade para verificação dos níveis de motivação departamental.","A nível organizacional, o novo modelo estrutural aqui preconizado causa impacto indireto na reavaliação do retorno esperado a longo prazo.","O cuidado em identificar pontos críticos na valorização de fatores subjetivos talvez venha a ressaltar a relatividade das diretrizes de desenvolvimento para o futuro.","No entanto, não podemos esquecer que a hegemonia do ambiente político deve passar por modificações independentemente das posturas dos órgãos dirigentes com relação às suas atribuições.","Assim mesmo, a necessidade de renovação processual estende o alcance e a importância do remanejamento dos quadros funcionais.","É importante questionar o quanto o fenômeno da Internet auxilia a preparação e a composição das posturas dos órgãos dirigentes com relação às suas atribuições.","O cuidado em identificar pontos críticos na execução dos pontos do programa representa uma abertura para a melhoria dos métodos utilizados na avaliação de resultados.","A nível organizacional, a percepção das dificuldades promove a alavancagem do remanejamento dos quadros funcionais.","Do mesmo modo, a consulta aos diversos militantes estende o alcance e a importância das posturas dos órgãos dirigentes com relação às suas atribuições."];
     const esquentador = saudacaoes[Math.floor(Math.random() * saudacaoes.length)];
@@ -248,7 +247,7 @@ client.on('message', async msg => {
     if (msg.body !== null) {
       msg.reply(esquentador);
     }
-  }, random);
+  }, 10000);
 
 });
     
